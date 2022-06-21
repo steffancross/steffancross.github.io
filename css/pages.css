@@ -1,0 +1,45 @@
+img {
+  margin: 0 auto;
+  display: block;
+}
+.page {
+  margin: 0 auto;
+  max-width: 750px;
+  text-align: left;
+}
+.home {
+  position: fixed;
+  top: 80px;
+  left: 40px;
+}
+span a,
+span a:visited  {
+  color: #000000;
+  font-style: italic;
+  text-decoration: none;
+  font-family: "Times New Roman";
+  font-size: 15px;
+}
+span a:hover {
+  font-style: italic;
+  color: #838383;
+  text-decoration: none;
+  font-family: "Times New Roman";
+  font-size: 15px;
+}
+
+figcaption {
+  font-family: "Times New Roman";
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+a {
+  text-decoration: none;
+  color: #068A08;
+}
+
+a:visited {
+  color: #068A08;
+}

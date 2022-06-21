@@ -1,0 +1,106 @@
+.border {
+  max-height: 100px;
+  margin: 2px;
+  padding: 2px;
+  border: 1px solid #fff;
+  float: left;
+}
+
+.border:hover {
+  border: 1px solid #9A9A9A;
+}
+
+.tv {
+  width: 850px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.one {
+  max-width: 600px;
+  max-height: 600px;
+  display: block;
+  margin: 0 auto;
+}
+
+#tabShows {
+  display: none;
+}
+
+.walls {
+  clear: both;
+  padding-top: 20px;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.description {
+  margin: 0 auto;
+  width: 550px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  font-family: "Helvetica";
+  font-weight: 330;
+  word-spacing: 1px;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.home {
+  position: fixed;
+  top: 80px;
+  left: 40px;
+}
+
+span a,
+span a:visited  {
+  color: #000000;
+  font-style: italic;
+  text-decoration: none;
+  font-family: "Helvetica";
+  font-size: 13px;
+  font-weight: 300;
+}
+
+span a:hover {
+  font-style: italic;
+  color: #838383;
+  text-decoration: none;
+  font-family: "Helvetica";
+  font-size: 13px;
+  font-weight: 300;
+}
+
+figcaption {
+  font-family: "Helvetica";
+  font-weight: 330;
+  word-spacing: 1px;
+  font-size: 12px;
+  font-style: italic;
+  padding-top: 3px;
+}
+@media only screen and (max-width: 576px) {
+  .tv {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  .border{
+    margin: 0 auto;
+    max-width: 40%;
+  }
+  .walls{
+    max-width: 90%;
+  }
+  .one {
+    max-width: 130%;
+    display: block;
+    margin-left: -38px;
+  }
+  .description{
+    max-width: 70%;
+  }
+  .home{
+    display: none;
+  }
+}
