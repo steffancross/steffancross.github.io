@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/general.css">
+    <title>arch100a</title>
+  </head>
+  <body>
+
+    <div id="clicks" class="tv">
+      <div id="tab1"><img src="../images/arch100a_site.jpg" class="border"></div>
+      <div id="tab2"><img src="../images/arch100a_axon.jpg" class="border"></div>
+      <div id="tab3"><img src="../images/arch100a_section.jpg" class="border"></div>
+      <div id="tab4"><img src="../images/arch100a_1st.jpg" class="border"></div>
+      <div id="tab5"><img src="../images/arch100a_2nd.jpg" class="border"></div>
+      <div id="tab6"><img src="../images/arch100a_3rd.jpg" class="border"></div>
+      <div id="tab7"><img src="../images/arch100a_4th.jpg" class="border"></div>
+      <div id="tab8"><img src="../images/arch100a_r1.jpg" class="border"></div>
+      <div id="tab9"><img src="../images/arch100a_r2.jpg" class="border"></div>
+    </div>
+
+    <div id="tabShows" class="walls">
+      <div id="tab1show">
+        <figure>
+          <img src="../images/arch100a_site.jpg" class="one">
+          <figcaption>Site</figcaption>
+        </figure>
+      </div>
+      <div id="tab2show">
+        <figure>
+          <img src="../images/arch100a_axon.jpg" class="one">
+          <figcaption>Axon</figcaption>
+        </figure>
+      </div>
+      <div id="tab3show">
+        <figure>
+          <img src="../images/arch100a_section.jpg" class="one">
+          <figcaption>Section</figcaption>
+        </figure>
+      </div>
+      <div id="tab4show">
+        <figure>
+          <img src="../images/arch100a_1st.jpg" class="one">
+          <figcaption>First Floor Plan</figcaption>
+        </figure>
+      </div>
+      <div id="tab5show">
+        <figure>
+          <img src="../images/arch100a_2nd.jpg" class="one">
+          <figcaption>Second Floor Plan</figcaption>
+      </div>
+      <div id="tab6show">
+        <figure>
+          <img src="../images/arch100a_3rd.jpg" class="one">
+          <figcaption>Third Floor Plan</figcaption>
+        </figure>
+      </div>
+      <div id="tab7show">
+        <figure>
+          <img src="../images/arch100a_4th.jpg" class="one">
+          <figcaption>Fourth Floor Plan</figcaption>
+        </figure>
+      </div>
+      <div id="tab8show">
+        <figure>
+          <img src="../images/arch100a_r1.jpg" class="one">
+          <figcaption>Interior Render</figcaption>
+        </figure>
+      </div>
+      <div id="tab9show">
+        <figure>
+          <img src="../images/arch100a_r2.jpg" class="one">
+          <figcaption>Interior Render</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="description">
+      <em style="font-size: 15px">Intersection</em><br>
+      <b>Architecture 100A:</b> Architectural Design<br>
+      <b>Professor:</b> David Jaehning <br><br>
+      This project is a new community center situated on 50’ x 100’ site adjacent
+      to the North Berkeley Bart station. The site is intersected by a 20’ wide path
+      that cuts horizontally across it.<br><br>
+
+      The moment where the path splits the site was extruded and became the
+      main staircase and circulation for the building. From the exterior,
+      circulation space is distinct from program space. The circulation
+      is open air and shaded with a semi-transparent mesh while the program spaces
+      are concrete and sealed.<br><br>
+
+      To the north of the split is an
+      art gallery, community storage area, and open roof. To the south is
+      an office area, cafe, and study space.  <br><br>
+
+
+    </div>
+
+    <div class="home">
+      <span><a href="../index.html">H o m e</a></span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      document.getElementById('tabShows').style.display = "block"
+      $('#tabShows div').hide();
+      $('#clicks').on('click', 'div', function(event){
+        var tabId = $(this).attr('id');
+        $('#tabShows div').hide();
+        $('#' + tabId + 'show').show();
+      });
+    </script>
+
+
+<!--
+    <div class="page">
+
+      <p>
+        <em>Intersection</em><br><br>
+        Architecture 100A: Fundamentals of Architectural Design<br><br>
+        Professor: David Jaehning
+      </p>
+
+      <p>
+        This project is a new community center situated on 50’ x 100’ site adjacent
+        to the North Berkeley Bart station. The site is intersected by a 20’ wide
+        path that runs horizontally through it.
+      </p>
+
+      <p>
+        To create the form and rules of the building, first I extruded the boundaries
+        f the site and intersecting path to the max floor height. Then, I rotated
+        the path extrusion 90 degrees and shifted it up one floor, creating a mass
+        that bridged the two site boundary extrusions. <br><br>
+        The moments where the path extrusion intersects with the boundary extrusions
+        became voided spaces within the building and also circulation between floors.
+        On the top floor the rules flip, the voided intersection now becomes solid and
+        the rest becomes void.
+      </p>
+
+      <p>
+        I also wanted intersection to not only influence the design but be felt
+        as one experiences the building as well. While subtle, every time one ascends
+        the stairs they meet an intersection, the choice to go either left or right.
+        Through the lowering of the floorplate at the intersection by one step,
+        when looking up or down, one is reminded of how the design was derived.
+      </p>
+
+
+    </div>
+
+    <div class="home">
+      <span><a href="../index.html">home</a></span>
+    </div>
+
+  -->
+  </body>
+</html>

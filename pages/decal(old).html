@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/decal.css">
+    <link rel="stylesheet" href="../css/siema.css">
+    <title>decal</title>
+  </head>
+  <body>
+
+    <div class="description">
+      In the spring of 2019, I co-instructed an introductory architecture course
+      with one of my best friends. It was called Arch 98: Digital Tools for
+      Architecture. We had taken a similar course in our freshman year and actually,
+      that was how we met. During that time we got close with the instructors
+      and they said how’d they wish it would keep going. A year and a half later
+      we decided to offer our own version of it. We changed the syllabus and
+      material quite a bit, focusing on software and concepts we thought were
+      the most important to get a good foundation in as an undergraduate architecture
+      major. The course ended up going well and we were really pleased with the
+      work our students produced over the semester.
+      <br><br>
+      The following semester, both with a little to much time on our hands and
+      having come back from design jobs over the summer, we wanted to work together
+      on something. We went to a lecture by Irma Boom, known as <em>The Queen of Books</em>.
+      We left that lecture very inspired and decided to make a small anthology
+      of our students’ final projects. Having no prompt it was an original piece for both of us.
+      <br><br>
+      These are some images of what we made.
+    </div>
+
+    <div class="siema">
+      <img src="../images/decal-1.jpg" alt="">
+      <img src="../images/decal-2.jpg" alt="">
+      <img src="../images/decal-3.jpg" alt="">
+      <img src="../images/decal-4.jpg" alt="">
+      <img src="../images/decal-5.jpg" alt="">
+      <img src="../images/decal-6.jpg" alt="">
+      <img src="../images/decal-7.jpg" alt="">
+      <img src="../images/decal-8.jpg" alt="">
+      <img src="../images/decal-9.jpg" alt="">
+    </div>
+
+    <div class="home">
+      <span><a href="../index.html">home</a></span>
+    </div>
+
+    <script src="../scripts/siema.min.js"></script>
+    <script type="text/javascript">
+
+      var siemas = document.querySelectorAll('.siema');
+// Extend prototype with method that adds arrows to DOM//
+      Siema.prototype.addArrows = function () {
+        var _this = this;
+// make buttons & append them inside Siema's container//
+        this.prevArrow = document.createElement('button');
+        this.nextArrow = document.createElement('button');
+        this.prevArrow.textContent = '▮';
+        this.nextArrow.textContent = '▮';
+        this.selector.appendChild(this.prevArrow);
+        this.selector.appendChild(this.nextArrow);
+// event handlers on buttons //
+        this.prevArrow.addEventListener('click', function () {
+          return _this.prev();
+        });
+        this.nextArrow.addEventListener('click', function () {
+          return _this.next();
+        });
+      };
+// this is fairly new way of looping through DOM Elements //
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = siemas[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var siema = _step.value;
+
+          var instance = new Siema({
+            selector: siema,
+            loop: true,
+          });
+          instance.addArrows();
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
+          }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

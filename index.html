@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="height: 100%; margin:0;">
+  <head>
+    <meta charset="utf-8">
+    <title>steffancross</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+
+<!-- made with leaflet <3 -->
+
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="scripts/leaflet/leaflet.css">
+    <script src="scripts/leaflet/leaflet.js"></script>
+
+  </head>
+  <body style="height: 100%; margin: 0;">
+    <style>
+    .info {
+      position: absolute;
+      font-family: "Helvetica";
+      font-size: 16px;
+      width: 150px;
+      background: none;
+      border: none;
+      box-shadow: none;
+      line-height: 130%;
+      font-weight: 400;
+    }
+    .leaflet-tooltip-right.gallery::before {
+      border-right-color: transparent;
+    }
+    .leaflet-tooltip-left.gallery::before {
+      border-left-color: transparent;
+    }
+    </style>
+
+    <div id='map' style="width: 100%; height: 100%; background: #ffffff;">
+
+
+    <script type="text/javascript">
+
+// DEFINE BOUNDS OF MAP //
+    var southWest = L.latLng(-52.48, -102.83),
+        northEast = L.latLng(55.07, 98.43),
+        mybounds = L.latLngBounds(southWest, northEast);
+// MAP DEFAULT //
+    var map = L.map('map', {
+      maxBounds: mybounds,
+      zoomControl: false,
+      attributionControl: false,
+    }).setView([6,13],5);
+// ROOT TOOLTIP IN PLACE //
+    var Icon = L.icon({
+      iconSize: [10, 10],
+      iconAnchor: [10, 10],
+    });
+// TOOLTIP //
+    var marker = new L.marker([13, 18], { opacity: 0.01 }).addTo(map);
+    marker.bindTooltip("Hi,<br/>I'm Steffan.<br/>click, drag, and zoom -to explore<br/>some of the projects I've worked on.<br/>or you can start by clicking on me",
+    { permanent: true, className: "info", offset: [15, -20] }).addTo(map);
+// IF ZOOM REMOVE TOOLTIP //
+    var lastZoom;
+    map.on('zoomend', function() {
+      var zoom = map.getZoom();
+      if (zoom < 5 && (!lastZoom || lastZoom >= 5)) {
+        map.eachLayer(function(l) {
+          if (l.getTooltip) {
+            var toolTip = l.getTooltip();
+            if (toolTip) {
+              this.map.closeTooltip(toolTip);
+          }
+        }
+      });
+    } else if (zoom >= 5 && (!lastZoom || lastZoom < 5)) {
+      map.eachLayer(function(l) {
+        if (l.getTooltip) {
+          var toolTip = l.getTooltip();
+          if (toolTip) {
+            this.map.addLayer(toolTip);
+          }
+        }
+      });
+    }
+    lastZoom = zoom;
+  })
+// TILES //
+    L.tileLayer('map/{z}/{x}/{y}.png', {
+      minZoom: 3,
+      maxZoom: 5,
+      noWrap: true,
+    }).addTo(map);
+// RECTANGLES //
+    var cover = new L.Rectangle(
+      [[-4.03, 0.74], [18.65, 13.09]
+    ]).addTo(map);
+    cover.on('click', function(){
+      window.open('pages/about.html', "_self");
+    });
+
+    var nwmedia = new L.Rectangle(
+      [[29.15, 46.45], [43.22, 65.39]
+    ]).addTo(map);
+    nwmedia.on('click', function(){
+      window.open('pages/nwmedia.html', "_self");
+    });
+
+    var arch11a = new L.Rectangle(
+      [[-29.07, 54.49], [12.12, 87.71]
+    ]).addTo(map);
+    arch11a.on('click', function(){
+      window.open('pages/arch11a.html', "_self");
+    });
+
+    var arch11b = new L.Rectangle(
+      [[18.97, -70.40], [40.97, -52.29]
+    ]).addTo(map);
+    arch11b.on('click', function(){
+      window.open('pages/arch11b.html', "_self");
+    });
+
+    var arch100a = new L.Rectangle(
+      [[9.27, -50.44], [26.19, -36.82]
+    ]).addTo(map);
+    arch100a.on('click', function(){
+      window.open('pages/arch100a.html', "_self");
+    });
+
+    var arch259 = new L.Rectangle(
+      [[-27.13, -80.85], [-3.60, -59.76]
+    ]).addTo(map);
+    arch259.on('click', function(){
+      window.open('pages/arch259.html', "_self");
+    });
+
+    var decal = new L.Rectangle(
+      [[-46.92, 20.56], [-31.57, 37.98]
+    ]).addTo(map);
+    decal.on('click', function(){
+      window.open('pages/decal.html', "_self");
+    });
+
+    var ieor170 = new L.Rectangle(
+      [[-38.13, -31.99], [-18.72, -13.44]
+    ]).addTo(map);
+    ieor170.on('click', function(){
+      window.open('pages/ieor170.html', "_self");
+    });
+
+    var ieor190 = new L.Rectangle(
+      [[35.60, -26.10], [51.39, -15.46]
+    ]).addTo(map);
+    ieor190.on('click', function(){
+      window.open('pages/ieor190.html', "_self");
+    });
+// RECTANGLE STYLING //
+    var featureGroup = L.featureGroup([
+    cover, nwmedia, arch11a, arch11b, arch100a, arch259, decal, ieor170, ieor190
+    ]);
+    featureGroup.setStyle({
+      stroke: false,
+      fillOpacity: 0,
+    });
+    featureGroup.addTo(map);
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/general.css">
+    <title>decal</title>
+  </head>
+  <body>
+    <style>
+      .border {
+        width: 100px;
+      }
+    </style>
+
+    <div id="clicks" class="tv">
+      <div id="tab1"><img src="../images/decal-1.jpg" class="border"></div>
+      <div id="tab2"><img src="../images/decal-2.jpg" class="border"></div>
+      <div id="tab3"><img src="../images/decal-3.jpg" class="border"></div>
+      <div id="tab4"><img src="../images/decal-4.jpg" class="border"></div>
+      <div id="tab5"><img src="../images/decal-5.jpg" class="border"></div>
+      <div id="tab6"><img src="../images/decal-6.jpg" class="border"></div>
+      <div id="tab7"><img src="../images/decal-7.jpg" class="border"></div>
+      <div id="tab8"><img src="../images/decal-8.jpg" class="border"></div>
+      <div id="tab9"><img src="../images/decal-9.jpg" class="border"></div>
+      <div id="tab10"><img src="../images/decal-10.jpg" class="border"></div>
+    </div>
+
+
+    <div id="tabShows" class="walls">
+      <div id="tab1show"><img src="../images/decal-1.jpg" class="one"></div>
+      <div id="tab2show"><img src="../images/decal-2.jpg" class="one"></div>
+      <div id="tab3show"><img src="../images/decal-3.jpg" class="one"></div>
+      <div id="tab4show"><img src="../images/decal-4.jpg" class="one"></div>
+      <div id="tab5show"><img src="../images/decal-5.jpg" class="one"></div>
+      <div id="tab6show"><img src="../images/decal-6.jpg" class="one"></div>
+      <div id="tab7show"><img src="../images/decal-7.jpg" class="one"></div>
+      <div id="tab8show"><img src="../images/decal-8.jpg" class="one"></div>
+      <div id="tab9show"><img src="../images/decal-9.jpg" class="one"></div>
+      <div id="tab10show"><img src="../images/decal-10.jpg" class="one"></div>
+    </div>
+
+
+
+    <div class="description">
+      <b>Digital Tools For Architecture</b><br>
+      In the spring of 2019, I co-instructed an introductory architecture course
+      with one of my best friends. It was called Arch 98: Digital Tools for
+      Architecture. We had taken a similar course in our freshman year and
+      was how we first met. During that time we talked with the student instructors
+      and learned that they wished it to continue after they would graduate. A year and a half later
+      we decided to offer our own version of it. We changed the syllabus and
+      material quite a bit, focusing on software and concepts we thought were
+      the most important to get a good foundation in as an undergraduate architecture
+      major. The course ended up going well and we were really pleased with the
+      work our students produced over the semester.
+      <br><br>
+      The following semester, both with some time on our hands and
+      having come back from design jobs over the summer, we wanted to work together
+      on something but were unsure on what. We went to a lecture by Irma Boom, known as <em>The Queen of Books</em>.
+      We left that lecture inspired and decided to make a small anthology
+      of our students’ final projects. Having no prompt it was an original piece.
+    </div>
+
+
+    <div class="home">
+      <span><a href="../index.html">H o m e</a></span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      document.getElementById('tabShows').style.display = "block"
+      $('#tabShows div').hide();
+      $('#clicks').on('click', 'div', function(event){
+        var tabId = $(this).attr('id');
+        $('#tabShows div').hide();
+        $('#' + tabId + 'show').show();
+      });
+    </script>
+
+  </body>
+</html>

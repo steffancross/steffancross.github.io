@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/general.css">
+    <title>arch259</title>
+  </head>
+  <body>
+
+    <div id="clicks" class="tv">
+      <div id="tab1"><img src="../images/arch259_dome.gif" class="border"></div>
+      <div id="tab2"><img src="../images/arch259_sketch.png" class="border"></div>
+      <div id="tab3"><img src="../images/arch259_sound.png" class="border"></div>
+      <div id="tab4"><img src="../images/arch259_graph.png" class="border"></div>
+      <div id="tab5"><img src="../images/arch259_gif1.gif" class="border"></div>
+    </div>
+
+    <div id="tabShows" class="walls">
+      <div id="tab1show">
+        <figure>
+          <img src="../images/arch259_dome.gif" class="one">
+          <figcaption>Ordos House, MOS Architects</figcaption>
+        </figure>
+      </div>
+      <div id="tab2show">
+        <figure>
+          <img src="../images/arch259_sketch.png" class="one">
+          <figcaption>6 Building blocks</figcaption>
+        </figure>
+      </div>
+      <div id="tab3show">
+        <figure>
+          <img src="../images/arch259_sound.png" class="one">
+          <figcaption>Bristol model</figcaption>
+        </figure>
+      </div>
+      <div id="tab4show">
+        <figure>
+          <img src="../images/arch259_graph.png" class="one">
+          <figcaption>Bristol model</figcaption>
+        </figure>
+      </div>
+      <div id="tab5show">
+        <figure>
+          <img src="../images/arch259_gif1.gif" class="one">
+          <figcaption>Bristol model</figcaption>
+      </div>
+    </div>
+
+    <div id="clicks2" class="tv">
+      <div id="tab6"><img src="../images/arch259_gif2.gif" class="border"></div>
+      <div id="tab7"><img src="../images/arch259_gif3.gif" class="border"></div>
+      <div id="tab8"><img src="../images/arch259_spread.jpg" class="border"></div>
+      <div id="tab9"><img src="../images/arch259_team.jpg" class="border"></div>
+    </div>
+
+    <div id="tabShows2" class="walls">
+      <div id="tab6show">
+        <figure>
+          <img src="../images/arch259_gif2.gif" class="one">
+          <figcaption>Bristol model</figcaption>
+        </figure>
+      </div>
+      <div id="tab7show">
+        <figure>
+          <img src="../images/arch259_gif3.gif" class="one">
+          <figcaption>Assembly of parts</figcaption>
+        </figure>
+      </div>
+      <div id="tab8show">
+        <figure>
+          <img src="../images/arch259_spread.jpg" class="one">
+          <figcaption>Axonometric</figcaption>
+        </figure>
+      </div>
+      <div id="tab9show">
+        <figure>
+          <img src="../images/arch259_team.jpg" class="one">
+          <figcaption>Plan</figcaption>
+        </figure>
+      </div>
+    </div>
+
+
+
+    <div class="home">
+      <span><a href="../index.html">H o m e</a></span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      document.getElementById('tabShows').style.display = "block"
+      $('#tabShows div').hide();
+      $('#clicks').on('click', 'div', function(event){
+        var tabId = $(this).attr('id');
+        $('#tabShows div').hide();
+        $('#' + tabId + 'show').show();
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      document.getElementById('tabShows2').style.display = "block"
+      $('#tabShows2 div').hide();
+      $('#clicks2').on('click', 'div', function(event){
+        var tabId = $(this).attr('id');
+        $('#tabShows2 div').hide();
+        $('#' + tabId + 'show').show();
+      });
+    </script>
+
+  </body>
+</html>

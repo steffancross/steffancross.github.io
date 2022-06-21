@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/general.css">
+    <title>ieor170</title>
+  </head>
+  <body>
+
+    <div id="clicks" class="tv">
+      <div id="tab1"><img src="../images/ieor170_1.png" class="border"></div>
+      <div id="tab2"><img src="../images/ieor170_2.png" class="border"></div>
+      <div id="tab3"><img src="../images/ieor170_3.png" class="border"></div>
+      <div id="tab4"><img src="../images/ieor170_4.png" class="border"></div>
+      <div id="tab5"><img src="../images/ieor170_5.png" class="border"></div>
+    </div>
+
+    <div id="tabShows" class="walls">
+      <div id="tab1show">
+        <figure>
+          <img src="../images/ieor170_1.png" class="one">
+          <figcaption></figcaption>
+        </figure>
+      </div>
+      <div id="tab2show">
+        <figure>
+          <img src="../images/ieor170_2.png" class="one">
+          <figcaption></figcaption>
+        </figure>
+      </div>
+      <div id="tab3show">
+        <figure>
+          <img src="../images/ieor170_3.png" class="one">
+          <figcaption></figcaption>
+        </figure>
+      </div>
+      <div id="tab4show">
+        <figure>
+          <img src="../images/ieor170_4.png" class="one">
+          <figcaption></figcaption>
+        </figure>
+      </div>
+      <div id="tab5show">
+        <figure>
+          <img src="../images/ieor170_5.png" class="one">
+          <figcaption></figcaption>
+      </div>
+    </div>
+
+    <div class="description">
+      <em style="font-size: 15px">Can One</em><br>
+      <b>Industrial Engineering 170:</b> Industrial Design and Human Factors<br>
+      <b>Professor:</b> Carisa Harris Adamson <br>
+      <b>Professor:</b> Viraj Attre, Elizabebth Zhou, Ali Mukaled, Steffan Cross <br><br>
+
+      During the spring of 2019, I took Industrial Engineering 170: Industrial Design
+      and Human Factors. Instead of being a design-centric course like I had been
+      accustomed to, the course was more research-centric. It was focused on understanding
+      the human form and how to consider it properly when designing for it. This ended
+      up being one of the most practical courses I took during my time at Berkeley
+      and taught me about the multiple levels one needs to consider when designing
+      products for people. <br><br>
+
+      Our final project was a redesign of an everyday object but with a focus on ergonomics
+      and interaction. The object chosen for my group was a watering can. <br><br>
+
+      At first, we were a little perplexed with what we could do to change the watering
+      can and what was even wrong with it in the first place. However, as we researched
+      more, we found that it was an object with quite a few problems and of all the
+      redesigns done to it, only a small minority made an attempt to remedy its issues. <br><br>
+
+      We found the <em>Union Products 2-Gallon Watering Can</em> to be one of the most popular
+      cans and used it as a standard to compare against. 2 gallons of water translates
+      to 16.7lbs and when considering that of the hobby gardener population, the
+      average age is 50 years old and 60% are female, 16.7lbs isn’t a trivial weight.
+      Further, the conventional design requires it to be placed on the ground when
+      filling, so, again for that population, bending over and picking up that can
+      is another burden along with carrying it from the from where it was filled
+      to the plants. During our interviews, we found that these actions are compounded
+      as the average person refills the can 1-2 times per session. <br><br>
+
+      However, the biggest issue by far was the wrist flexion under tension while pouring.
+      As we found results on the internet and through our interviews, that wrist
+      motion with weight compounded over thousands of pours, can lead to serious
+      injuries. But even long before those added up, many felt discomfort or fatigue
+      in their wrists after watering. <br><br>
+
+      With these issues in mind, we designed a can that strayed far from the form
+      of a conventional watering can. It has a long spout, two large wheels, and
+      a cross grip. We did away with the bending and carrying, instead, one holds
+      the grip near the spout and pulls the can behind from destination to destination.
+      When it comes time to water, without bending over to lift, the can is pulled
+      up from a standing position with both hands. Then, one hand is transferred
+      to the cross grip and the other to the grip along the body. To pour the cross
+      grip is used to support the weight while the can rotates on its wheel axis,
+      driven by an up and down motion and eliminating the wrist strain that had been
+      the main culprit of injuries in the conventional design.<br><br>
+
+      If interested in reading our whole report, it can be found <a href="../images/ieor170_report.pdf">here</a>
+
+    </div>
+
+    <div class="home">
+      <span><a href="../index.html">H o m e</a></span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      document.getElementById('tabShows').style.display = "block"
+      $('#tabShows div').hide();
+      $('#clicks').on('click', 'div', function(event){
+        var tabId = $(this).attr('id');
+        $('#tabShows div').hide();
+        $('#' + tabId + 'show').show();
+      });
+    </script>
+
+
+<!--
+      <p>
+        <em>A Can</em><br><br>
+        Industrial Engineering 170: Industrial Design and Human Factors<br><br>
+        Professor: Carisa Harris Adamson<br><br>
+        Team: Viraj Attre, Elizabebth Zhou, Ali Mukaled, Steffan Cross
+      </p>
+
+      <p>
+        This project is a redesign of the conventional watering can. We chose the
+        watering can because despite the many redesigns and variations that continue
+        to come out, not much really changes. All the same issues that were
+        present from the start, still remain. The main issue is the wrist action
+        associated with pouring from a watering can. However, when looking at the
+        whole process from filling to transport to watering and back again, even
+        more arise. We tried to address the entire use-cycle with our design.
+      </p>
+
+      <p>
+        We began and spent most of our time researching. To provide a thorough solution
+        we needed to understand: the current offerings, demographics, ways of use,
+        and common injuries. Our engagement with design assumptions centered around
+        a strong ideal of minimalism, and reducing the entire perception of our product
+        to one of practicality and curiosity over technology and complexity, with
+        group discussion being driven around the following image from an early lecture
+        slide.
+      </p>
+
+      <img src="../images/ieor190_comic.png" alt="" style="max-width: 500px">
+
+      <p>
+        While exploring current watering cans on the market we found the <em>Union
+        Products 2-Gallon Watering Can</em> to be one of the most popular out there
+        and used that as the standard to compare against in our design iterations.
+        To understand the issues facing this can we did a Rapid Entire Body Assesment
+        (REBA), used to asses the risk of musculoskeletal disorders (MSD) of a task,
+        on it and got a resulting score of 6. While this isn’t conclusive of a
+        dangerous task, it does show there is a considerable risk especially over
+        the course of hundreds to thousands of pours.
+      </p>
+
+      <p>
+        We also conducted a few informal interviews with hobby gardeners and found
+        first and foremost, associations of wrist pain when or after using a traditional
+        watering can. We also found discomfort with the transportation and weight
+        of the can as well. Of the hobby gardener population, the average age is
+        50 years old and 60% are female. To this population, bending over and
+        lifting a 20lb can is not an easy task. These became the two main problem points
+        that we addressed with our design.
+      </p>
+
+      <p>
+        Because the majority of hobby gardeners are older we designed for the lower
+        bell curve for older women. Our target population was the 5th percentile
+        of older women. We choose this because if it would be comfortable for an
+        older woman to use then it should be for practically anyone else.
+      </p>
+
+      <div class="siema">
+        <img src="../images/ieor170_1.png" alt="" style="max-width: 600px">
+        <img src="../images/ieor170_2.png" alt="" style="max-width: 600px">
+        <img src="../images/ieor170_3.png" alt="" style="max-width: 600px">
+        <img src="../images/ieor170_4.png" alt="" style="max-width: 600px">
+        <img src="../images/ieor170_5.png" alt="" style="max-width: 600px">
+      </div>
+
+      <p>
+        Our final design is of a watering can that strays far from the form of a
+        conventional watering can. It has a long spout, two large wheels, and a
+        cross grip. With this design, we did away with all the bending over and
+        carrying that was normally done. Instead, one holds the rubberized grip
+        near the top and rolls the can behind from destination to destination. When
+        it comes time to water, without bending over to lift, the can is pulled
+        up from a standing position with both hands. Then, one hand is transferred
+        to the cross grip and the other to the grip along the body. To pour the
+        cross grip is used to support the weight while the can rotates on its
+        wheel axis, driven by an up and down motion of the other hand eliminating
+        the wrist strain that had been the main culprit of injuries in the conventional
+        design. We reassessed our design with REBA and got a final score of 2,
+        indicating low risk and a 4 point increase from the standard.
+      </p>
+
+      <p>
+        If interested in reading our final writeup, you can find it <a href="../images/ieor170_report.pdf" target="_blank">here</a>
+      </p>
+
+      <script src="../scripts/siema.min.js"></script>
+      <script type="text/javascript">
+
+        var siemas = document.querySelectorAll('.siema');
+  // Extend prototype with method that adds arrows to DOM//
+        Siema.prototype.addArrows = function () {
+          var _this = this;
+  // make buttons & append them inside Siema's container//
+          this.prevArrow = document.createElement('button');
+          this.nextArrow = document.createElement('button');
+          this.prevArrow.textContent = '▮';
+          this.nextArrow.textContent = '▮';
+          this.selector.appendChild(this.prevArrow);
+          this.selector.appendChild(this.nextArrow);
+  // event handlers on buttons //
+          this.prevArrow.addEventListener('click', function () {
+            return _this.prev();
+          });
+          this.nextArrow.addEventListener('click', function () {
+            return _this.next();
+          });
+        };
+  // this is fairly new way of looping through DOM Elements //
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = siemas[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var siema = _step.value;
+
+            var instance = new Siema({
+              selector: siema,
+              loop: true,
+            });
+            instance.addArrows();
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+              _iterator.return();
+            }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+            }
+          }
+        }
+      </script>
+
+    </div>
+    <div class="home">
+      <span><a href="../index.html">home</a></span>
+    </div>
+  -->
+  </body>
+</html>

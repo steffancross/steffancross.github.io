@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/general.css">
+    <title>arch11a</title>
+  </head>
+  <body>
+
+    <div id="clicks" class="tv">
+      <div id="tab1"><img src="../images/arch11a_musician.jpg" class="border"></div>
+      <div id="tab2"><img src="../images/arch11a_progression.jpg" class="border"></div>
+      <div id="tab3"><img src="../images/arch11a_chip1.jpg" class="border"></div>
+      <div id="tab4"><img src="../images/arch11a_chip2.jpg" class="border"></div>
+      <div id="tab5"><img src="../images/arch11a_process.jpg" class="border"></div>
+      <div id="tab6"><img src="../images/arch11a_cutaway.jpg" class="border"></div>
+      <div id="tab7"><img src="../images/arch11a_axon.jpg" class="border"></div>
+    </div>
+
+
+    <div id="tabShows" class="walls">
+      <div id="tab1show">
+        <figure>
+          <img src="../images/arch11a_musician.jpg" class="one">
+          <figcaption>The Musician, Georges Braques</figcaption>
+        </figure>
+      </div>
+      <div id="tab2show">
+        <figure>
+          <img src="../images/arch11a_progression.jpg" class="one">
+          <figcaption>Bristol studies</figcaption>
+        </figure>
+      </div>
+      <div id="tab3show">
+        <figure>
+          <img src="../images/arch11a_chip1.jpg" class="one">
+          <figcaption>Chipboard study 1</figcaption>
+        </figure>
+      </div>
+      <div id="tab4show">
+        <figure>
+          <img src="../images/arch11a_chip2.jpg" class="one">
+          <figcaption>Chipboard study 2</figcaption>
+        </figure>
+      </div>
+      <div id="tab5show">
+        <figure>
+          <img src="../images/arch11a_process.jpg" class="one">
+          <figcaption>Axon process</figcaption>
+      </div>
+      <div id="tab6show">
+        <figure>
+          <img src="../images/arch11a_cutaway.jpg" class="one">
+          <figcaption>Axon cutaway</figcaption>
+        </figure>
+      </div>
+      <div id="tab7show">
+        <figure>
+          <img src="../images/arch11a_axon.jpg" class="one">
+          <figcaption>Full axon</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="description">
+      <em style="font-size: 15px">Void</em><br>
+      <b>Architecture 11A:</b> Introduction to Visual Representation<br>
+      <b>Professor:</b> Darrell Fields <br><br>
+      This project took a given 2D precedent, <em>The Musician</em> by Georges Braques,
+      and tasked us with translating the spatial qualities of the composition into a 3D figure
+      to study phenomenal transparency and various methods of representation.<br><br>
+
+      The first portion of studies were done on bristol paper, where the formal
+      and spatial qualities of the precedent piece were investigated and observed.<br><br>
+
+      Those qualities then were translated from the two-dimensional to the three
+      dimensional in the form of a chipboard model. This model was used to further
+      study spatial qualities and began development of three intentional spaces.<br><br>
+
+      The three spaces were finalized in an original axonometric composition
+      whose formal and spatial qualities called back to the precedent piece.
+      Along with that, a cut-away composition revealed those three spaces and the process
+      diagram showed how the axon was created through plan and section cuts.
+
+      <div class="home">
+        <span><a href="../index.html">H o m e</a></span>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+        document.getElementById('tabShows').style.display = "block"
+        $('#tabShows div').hide();
+        $('#clicks').on('click', 'div', function(event){
+          var tabId = $(this).attr('id');
+          $('#tabShows div').hide();
+          $('#' + tabId + 'show').show();
+        });
+      </script>
+    </div>
+  </body>
+</html>

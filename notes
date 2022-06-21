@@ -1,0 +1,37 @@
+<!-- FIND CORDS -->
+    var marker = L.marker([0, 0], {
+      draggable:true,
+    }).addTo(map);
+
+    marker.on('dragend', function(e) {
+      alert(marker.getLatLng().toString());
+    });
+
+
+
+    <div id="display" style="display:none;">
+          hi, <br><br>
+          i'm steffan <br><br>
+          drag and click and zoom to explore some of the projects i've worked on
+    </div>
+
+
+    <style type="text/css">
+      #display {
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: #000000;
+        font-family: "Times New Roman";
+      }
+    </style>
+
+
+
+    // MESSAGEBOX //
+        var options = { timeout: 5000 }
+        var box = L.control.messagebox(options).addTo(map);
+        box.setPosition('topcenter');
+        box.show( 'hi,<br/>i&apos;m steffan,<br/>click, drag, and zoom to explore some of the projects i&apos;ve worked on' );
+    
